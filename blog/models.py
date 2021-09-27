@@ -3,7 +3,7 @@ from django.db import models
 
 class GeneralPageInformation(models.Model):
     company_name = models.CharField('Название компании', max_length=20)
-    company_icon = models.ImageField('Логотип компании', blunk=True, upload_to='images/company/logo/')
+    company_icon = models.ImageField('Логотип компании', blank=True, upload_to='images/company/logo/')
     company_description = models.TextField('Описание компании', blank=True)
     company_address_ofice = models.CharField('Адрес компании', max_length=225)
     company_phone_number_1 = models.CharField('Контактный телефон 1', max_length=20)
